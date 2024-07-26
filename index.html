@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Wilayah</title>
     <style>
       #map {
         height: 100%;
@@ -85,9 +85,9 @@
       }
       .box {
         position: absolute;
-        top: 20px;
+        top: 60px;
         right: 20px;
-        width: 225px;
+        width: 260px;
         height: 200px;
         background-color: #f0f0f0;
         border: 2px solid #333;
@@ -132,7 +132,7 @@
       <a href="\Gerejatest\Wilayah.html">Wilayah</a>
       <a href="\Gerejatest\Lingkungan.html">Lingkungan</a>
   </div>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <input id="pac-input" class="controls" type="text" placeholder="Input your location here...">
     <div id="map">
         
       <script>
@@ -143,7 +143,7 @@
           center: {lat: -6.240555431778528, lng: 106.78744159242352}
         });
   
-        map.data.loadGeoJson("/Product/Maps/Dekanat Selatan.json");
+        map.data.loadGeoJson("Maps/Paroki_Blok_B_-_Wilayah_13_Mei_2016.geojson");
   
           var input = document.getElementById('pac-input');
           var searchBox = new google.maps.places.SearchBox(input);
@@ -235,10 +235,17 @@
            async defer>
           </script>
     </div>
-    
-    <div class="tag">
-      <p>Jared Josua Sitmorang</p>
+    <div class="box" id="myBox">
+      <h2>Informasi</h2>
+      <p>Wilayah: <span id="wilayah"></span></p>
+      <h3>Koordinator Wilayah</h3>
+      <p>Nama: <span id="nama"></span></p>
+      <p>Nomor: <span id="nomor"></span></p>
+      <p>Alamat: <span id="alamat"></span></p>
+
   </div>
-  
+  <div class="tag">
+    <p>Jared Josua Sitmorang</p>
+</div>
   </body>
 </html>
