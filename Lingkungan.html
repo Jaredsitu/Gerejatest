@@ -60,8 +60,6 @@
 
       #pac-input {
         position: absolute;
-        top: 60px;
-        right: 10px;
         z-index: 5;
         background-color: #fff;
         font-family: Roboto;
@@ -90,8 +88,8 @@
       }
       .box {
         position: absolute;
-        bottom: 5%;
-        left: 3%;
+        bottom: 2%;
+        left: 2%;
         background-color: #f0f0f0;
         border: 2px solid #333;
         border-radius: 10px;
@@ -152,7 +150,7 @@
   
           var input = document.getElementById('pac-input');
           var searchBox = new google.maps.places.SearchBox(input);
-          map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+          map.controls[google.maps.ControlPosition.LEFT].push(input);
   
           map.addListener('bounds_changed', function() {
             searchBox.setBounds(map.getBounds());
