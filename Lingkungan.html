@@ -59,6 +59,10 @@
       }
 
       #pac-input {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        z-index: 5;
         background-color: #fff;
         font-family: Roboto;
         font-size: 15px;
@@ -67,6 +71,7 @@
         padding: 0 11px 0 13px;
         text-overflow: ellipsis;
         width: 400px;
+  
       }
 
       #pac-input:focus {
@@ -85,8 +90,8 @@
       }
       .box {
         position: absolute;
-        top: 60px;
-        right: 20px;
+        bottom: 5%;
+        left: 3%;
         background-color: #f0f0f0;
         border: 2px solid #333;
         border-radius: 10px;
@@ -124,13 +129,15 @@
         }
     </style>
   </head>
+  
   <body>
+    <input id="pac-input" class="controls" type="text" placeholder="Alamat">
     <div class="navbar">
       <a href="index.html">Wilayah</a>
       <a href="Lingkungan.html">Lingkungan</a>
   </div>
     
-    <input id="pac-input" class="controls" type="text" placeholder="Input your location here...">
+    
     <div id="map">
         
       <script>
