@@ -59,6 +59,7 @@
       }
 
       #pac-input {
+        max-width: 100% - 24px;
         position: absolute;
         z-index: 5;
         background-color: #fff;
@@ -96,8 +97,8 @@
     }
     .tag {
       position: absolute;
-        bottom: 1px;
-        right: 30px;
+        bottom: 50px;
+        right: 50px;
         width: 145px;
         height: 1px;
         color: #4d90fe;
@@ -107,6 +108,10 @@
     .navbar {
             overflow: hidden;
             background-color: #333;
+            position: fixed; /* Make the navbar fixed */
+        top: 0; /* Position it at the top of the page */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it appears above other elements */
         }
 
         /* Navbar links */
@@ -132,7 +137,7 @@
       <a href="\Gerejatest\index.html">Wilayah</a>
       <a href="\Gerejatest\Lingkungan.html">Lingkungan</a>
   </div>
-    <input id="pac-input" class="controls" type="text" placeholder="Alamat">
+    <input id="pac-input" class="controls" type="text" placeholder="Masukkan alamat yang ingin dicari">
     <div id="map">
         
       <script>
@@ -155,6 +160,7 @@
   
           var markers = [];
           searchBox.addListener('places_changed', function() {
+            
             var places = searchBox.getPlaces();
   
             if (places.length == 0) {
@@ -240,8 +246,9 @@
       <p>Wilayah: <span id="wilayah"></span></p>
       <h3>Koordinator Wilayah</h3>
       <p>Nama: <span id="nama"></span></p>
-      <p>Nomor: <span id="nomor"></span></p>
       <p>Alamat: <span id="alamat"></span></p>
+      <p>Nomor Telepon: <span id="nomor"></span></p>
+      
 
   </div>
   <div class="tag">

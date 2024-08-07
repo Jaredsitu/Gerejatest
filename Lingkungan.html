@@ -97,8 +97,8 @@
     }
     .tag {
       position: absolute;
-        bottom: 1px;
-        right: 30px;
+        bottom: 50px;
+        right: 50px;
         width: 145px;
         height: 1px;
         color: #4d90fe;
@@ -108,6 +108,11 @@
     .navbar {
             overflow: hidden;
             background-color: #333;
+            position: fixed; /* Make the navbar fixed */
+        top: 0; /* Position it at the top of the page */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it appears above other elements */
+
         }
 
         /* Navbar links */
@@ -129,7 +134,7 @@
   </head>
   
   <body>
-    <input id="pac-input" class="controls" type="text" placeholder="Alamat">
+    <input id="pac-input" class="controls" type="text" placeholder="Masukkan alamat yang ingin dicari">
     <div class="navbar">
       <a href="index.html">Wilayah</a>
       <a href="Lingkungan.html">Lingkungan</a>
@@ -243,8 +248,8 @@
       <p>Lingkungan: <span id="wilayah"></span></p>
       <h3>Ketua Lingkungan</h3>
       <p>Nama: <span id="nama"></span></p>
-      <p>Nomor: <span id="nomor"></span></p>
       <p>Alamat: <span id="alamat"></span></p>
+      <p>Nomor Telepon: <span id="nomor"></span></p>
 
   </div>
   <div class="tag">
