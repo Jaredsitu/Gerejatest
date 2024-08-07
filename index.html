@@ -87,6 +87,7 @@
         width: 345px;
       }
       .box {
+        visibility: hidden;
         position: absolute;
         bottom: 2%;
         left: 2%;
@@ -94,6 +95,7 @@
         border: 2px solid #333;
         border-radius: 10px;
         padding: 10px;
+        
     }
     .tag {
       position: absolute;
@@ -225,6 +227,10 @@
           document.getElementById("wilayah").innerText = wilayah;
           document.getElementById("nomor").innerText = nomor;
           document.getElementById("nama").innerText = nama;
+
+          // Show the box
+        var box = document.getElementById("myBox");
+        box.style.visibility = "visible";
         
           
         });
