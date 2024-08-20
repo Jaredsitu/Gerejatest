@@ -231,6 +231,7 @@
           let html = 'Wilayah: ' + wilayah;
           let nomor = event.feature.getProperty("Nomor");
           let nama = event.feature.getProperty("Nama");
+          let alamat = event.feature.getProperty("Alamat");
           infowindow.setContent(html); 
           infowindow.setPosition(event.latLng); 
           infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)}); 
@@ -238,6 +239,7 @@
           document.getElementById("wilayah").innerText = wilayah;
           document.getElementById("nomor").innerText = nomor;
           document.getElementById("nama").innerText = nama;
+          document.getElementById("alamat").innerText = alamat;
 
           // Show the box
         var box = document.getElementById("myBox");
